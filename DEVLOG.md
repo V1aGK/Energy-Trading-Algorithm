@@ -25,6 +25,10 @@ I printed the onshore and offshore shape to see how many rows of forecasted data
 The numbers seems a little odd. I guess I will ask claude if this number is expected for the period I am working with.
 Claude says that the rows should be around 68000. I am not sure how to fix it, I will come back to it.
 
+#Day 4 - 13/03/2026
+Does ENTSOE not publish by the hour, the data I need? I guess I have to check.
+I printed the head(20) and tail(20) of my wind forecast data and in 2018, they are hourly but in 2025 they are every 15 minutes, for some reason. Either I could take the specific hour time or maybe because of the volatility I should take the mean? I am not sure. Because also my data are in MW not MWh meaning, a measure of power at a specific time point. I will do the mean(), let's see. 
+
 
 
 
