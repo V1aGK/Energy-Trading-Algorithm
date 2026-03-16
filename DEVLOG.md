@@ -29,6 +29,11 @@ Claude says that the rows should be around 68000. I am not sure how to fix it, I
 Does ENTSOE not publish by the hour, the data I need? I guess I have to check.
 I printed the head(20) and tail(20) of my wind forecast data and in 2018, they are hourly but in 2025 they are every 15 minutes, for some reason. Either I could take the specific hour time or maybe because of the volatility I should take the mean? I am not sure. Because also my data are in MW not MWh meaning, a measure of power at a specific time point. I will do the mean(), let's see. 
 
+#Day5 - 16/03/2026
+I have some missing values(null) from my data. Specifically, 223 from onshore and 313 from offshore. Comparing these to our whole data rows (67000), it's a really small number but I can't leave it 0 or NaaN, so I am thinking of doing a linear interpolation I guess. I am not sure if this is the optimal route but I guess it provides a reasonable estimation. I will be using the .interpolate() to fill in the gaps (https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.interpolate.html).
+Okay, it works, we have 0 missing values from our dataset. Doing the same thing for the actual load data and load forecast. 
+
+
 
 
 
