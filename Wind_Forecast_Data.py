@@ -33,7 +33,21 @@ print("Offshore shape:", wind_offshore.shape)
 print(wind_onshore.head(10))
 print(wind_onshore.index.freq)
 
-print("Onshore from:", wind_onshore.index.min())
-print("Onshore to:  ", wind_onshore.index.max())
-print("Offshore from:", wind_offshore.index.min())
-print("Offshore to:  ", wind_offshore.index.max())
+#print("Onshore from:", wind_onshore.index.min())
+#print("Onshore to:  ", wind_onshore.index.max())
+#print("Offshore from:", wind_offshore.index.min())
+#print("Offshore to:  ", wind_offshore.index.max())
+
+# Rename columns
+wind_onshore.columns  = ["wind_onshore_mw"]
+wind_offshore.columns = ["wind_offshore_mw"]
+
+#Resample to hourly by taking the mean of each hour
+wind_onshore_hourly  = wind_onshore.resample("h").mean()
+wind_offshore_hourly = wind_offshore.resample("h").mean()
+
+print(f"Onshore missing values: {wind_onshore_hourly.isnull().sum().sum()}")
+print(f"Offshore missing values: {wind_offshore_hourly.isnull().sum().sum()}")
+print(f"Onshore negative values: {(wind_onshore_hourly < 0).sum().sum()}")
+print(f"Offshore negative values: {(wind_offshore_hourly < 0).sum().sum()}")
+
