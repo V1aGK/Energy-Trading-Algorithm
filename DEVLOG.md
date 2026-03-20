@@ -34,7 +34,11 @@ I have some missing values(null) from my data. Specifically, 223 from onshore an
 Okay, it works, we have 0 missing values from our dataset. Doing the same thing for the actual load data and load forecast. 
 
 #Day6 - 20/03/2026
-Checked for missing values in the load forecast and actual data and interpolated. Saved the data and we are done with the load data. Next step is to gather the temperature data because it fluctuates the demand. After that I will merge all the data into a one dataframe.
+Checked for missing values in the load forecast and actual data and interpolated. Saved the data and we are done with the load data. Next step is to gather the temperature data because it fluctuates the demand. After that I will merge all the data into a one dataframe. 
+
+I looked a bit for historical temperature data in DK1 or Denmark in general but I could not find something that I can use. I asked Claude and told me to use the Open-Meteo API. They have an API for historical temperature data and they give you the code also so it was fairly easy: https://open-meteo.com/en/docs/historical-weather-api
+
+We have more values than the other datasets but we will get to it when we merge them.
 
 
 
