@@ -33,6 +33,9 @@ I printed the head(20) and tail(20) of my wind forecast data and in 2018, they a
 I have some missing values(null) from my data. Specifically, 223 from onshore and 313 from offshore. Comparing these to our whole data rows (67000), it's a really small number but I can't leave it 0 or NaaN, so I am thinking of doing a linear interpolation I guess. I am not sure if this is the optimal route but I guess it provides a reasonable estimation. I will be using the .interpolate() to fill in the gaps (https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.interpolate.html).
 Okay, it works, we have 0 missing values from our dataset. Doing the same thing for the actual load data and load forecast. 
 
+#Day6 - 20/03/2026
+Checked for missing values in the load forecast and actual data and interpolated. Saved the data and we are done with the load data. Next step is to gather the temperature data because it fluctuates the demand. After that I will merge all the data into a one dataframe.
+
 
 
 
