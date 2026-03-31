@@ -40,6 +40,9 @@ I looked a bit for historical temperature data in DK1 or Denmark in general but 
 
 We have more values than the other datasets but we will get to it when we merge them.
 
+#Day7 - 31/03/2026
+Creating a script that will take calendar futures from the prices dataframe we already have and adress the seasons, weekends and holidays. Right now there is a small issue where the dataframe is filled with NaaN values because I guess the df and df_calendar do not have the same indexing. 
+
 
 
 
