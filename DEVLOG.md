@@ -42,7 +42,9 @@ We have more values than the other datasets but we will get to it when we merge 
 
 #Day7 - 31/03/2026
 Creating a script that will take calendar futures from the prices dataframe we already have and adress the seasons, weekends and holidays. Right now there is a small issue where the dataframe is filled with NaaN values because I guess the df and df_calendar do not have the same indexing. 
-Okay I added to the extraction of the data futures a .values as it strip the index away so now there is no issue with alignment.
+Okay I added to the extraction of the data futures a .values as it strip the index away so now there is no issue with alignment. 
+
+On a different note, I saw that my jupyter is not being updated because i forget to save what i am doing before pushing to github. It is being used thought constantly to run chunks of code instead of running the whole thing.
 
 
 
