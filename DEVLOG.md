@@ -49,6 +49,8 @@ On a different note, I saw that my jupyter is not being updated because i forget
 #Day8 3/04/2026
 I am thinking of how to proceed. I will start building the models I will use to predict the day ahead prices. The first one will be naive model where tomorrows price will be the same as the price of today. This will be used as a benchmark. The second model I am thinking it will be a linear regression model and the third and final one will be a ML model maybe an XGBoost one. 
 
+Built the naive model. From our merged dataframe from the previous day, i used the SportPriceEUR columns and shifted them for 24 hours and (24*7 = 168) hours. I split the data into train and test, the train is till 31/12/2022 and then I calculated the metrics mae,rmse, and directional accuracy which i stored to a csv. I think I will move the regressional model
+
 
 
 
