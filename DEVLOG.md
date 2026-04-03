@@ -46,6 +46,9 @@ Okay I added to the extraction of the data futures a .values as it strip the ind
 
 On a different note, I saw that my jupyter is not being updated because i forget to save what i am doing before pushing to github. It is being used thought constantly to run chunks of code instead of running the whole thing.
 
+#Day8 3/04/2026
+I am thinking of how to proceed. I will start building the models I will use to predict the day ahead prices. The first one will be naive model where tomorrows price will be the same as the price of today. This will be used as a benchmark. The second model I am thinking it will be a linear regression model and the third and final one will be a ML model maybe an XGBoost one. 
+
 
 
 

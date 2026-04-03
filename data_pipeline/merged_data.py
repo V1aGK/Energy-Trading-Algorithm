@@ -27,5 +27,4 @@ df_merged = df_merged.ffill().bfill()
 #Save the merged dataframe to a new parquet file
 os.makedirs("data/processed", exist_ok=True)
 df_merged.to_parquet("data/processed/merged_data.parquet")
-print(df_merged.head())
-print(df_merged.isnull().sum().sum())
+
