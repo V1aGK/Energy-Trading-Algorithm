@@ -47,4 +47,3 @@ results = {
 
 os.makedirs("results", exist_ok=True)
 results_df = pd.DataFrame(results).T
-results_df.to_csv("results/naive_forecast_results.csv", index=True)
