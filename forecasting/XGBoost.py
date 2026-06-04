@@ -5,7 +5,7 @@ import numpy as np
 import os 
 
 df_merged = pd.read_parquet("data/processed/merged_data.parquet")
-df_xgboost = df_merged[["wind_onshore_mw", "wind_offshore_mw", "temperature_2m", "load_forecast_mw", "SpotPriceEUR", "Hour", "DayOfWeek", "Month", "is_holiday"]]
+df_xgboost = df_merged[["wind_onshore_mw", "wind_offshore_mw", "temperature_2m", "load_forecast_mw", "SpotPriceEUR", "Hour", "DayOfWeek", "Month", "is_holiday", "ttf_gas_price"]]
 df_xgboost["wind_penetration"] = (df_xgboost["wind_onshore_mw"] + df_xgboost["wind_offshore_mw"]) / df_xgboost["load_forecast_mw"]
 # Create lag features for the target variable
 df_xgboost["SpotPriceEUR_lag_24h"] = df_xgboost["SpotPriceEUR"].shift(24)
@@ -27,7 +27,7 @@ df_xgboost = df_xgboost.dropna()
 
 # Define the features and target variable for training
 features = ["wind_onshore_mw", "wind_offshore_mw", "temperature_2m", "load_forecast_mw", "wind_penetration", "Hour", "DayOfWeek", "Month", "is_holiday", "SpotPriceEUR_lag_24h", 
-            "SpotPriceEUR_lag_168h", "SpotPriceEUR_lag_48h", "SpotPriceEUR_lag_72h", "SpotPriceEUR_lag_96h", "SpotPriceEUR_lag_120h", "Rolling_Mean_7d", "Rolling_Mean_30d", "Rolling_std_7d"]
+            "SpotPriceEUR_lag_168h", "SpotPriceEUR_lag_48h", "SpotPriceEUR_lag_72h", "SpotPriceEUR_lag_96h", "SpotPriceEUR_lag_120h", "Rolling_Mean_7d", "Rolling_Mean_30d", "Rolling_std_7d", "ttf_gas_price"]
 target = "SpotPriceEUR"
 
 folds = [{"train_start": "2018-01-01", "train_end": "2020-12-31", "test_start": "2021-01-01", "test_end": "2021-12-31"},
