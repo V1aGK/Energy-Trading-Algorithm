@@ -51,6 +51,8 @@ I am thinking of how to proceed. I will start building the models I will use to 
 
 Built the naive model. From our merged dataframe from the previous day, i used the SportPriceEUR columns and shifted them for 24 hours and (24*7 = 168) hours. I split the data into train and test, the train is till 31/12/2022 and then I calculated the metrics mae,rmse, and directional accuracy which i stored to a csv. I think I will move the regressional model
 
-
+#Day9 4/06/2026
+Damn I didn't even remember it has been so long since last time. I will be trying to get back to coding these days hopefully. I remember that I didn't like the results for the XGBoost that much so I created a tuner file where I am trying to find the best parameters for the model. 
+After that, seeing that the only year the MAE and MSE dropeed where the crisis of 2022. So I am looking on how to add the gas prices now.
 
 
